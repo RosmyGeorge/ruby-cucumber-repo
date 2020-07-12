@@ -1,0 +1,2 @@
+default: -f pretty --format junit --out=Testresults
+search: --format progress --format junit --out=Test_Results -t @search -t @search  <%= "-t " + ENV['TAGS'] unless ENV['TAGS'].nil? %>

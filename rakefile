@@ -1,0 +1,25 @@
+require 'rubygems'
+require 'cucumber'
+require 'cucumber/rake/task'
+
+
+
+profiles = YAML.load (File.open(File.join(Dir.pwd,'cucumber.yml')))
+# puts profiles
+  profiles.each do |profile_name, profile_value|
+    Cucumber::Rake::Task.new(profile_name.to_sym,"description of #{profile_name}") do |t|
+      t.profile =  profile_name
+    end
+  end
+
+desc "Run with tags"
+Cucumber::Rake::Task.new(:t, "Run 'all' profile, pass tags as args.") do |t|
+  t.profile = 'all'
+  ARGV.shift #Ignore the first value in ARGV (it will be the rake task name)
+  options = ""
+  ARGV.each do |tag|
+    options.concat("--tags #{tag} ") if tag.match(/^(?:@|~)/) #Only add arguments that begin with '@' or '~'.
+  end
+  t.cucumber_opts = options
+end
+

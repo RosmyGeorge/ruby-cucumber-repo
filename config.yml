@@ -1,0 +1,11 @@
+
+production: 'https://www.virginholidays.co.uk'
+
+staging: 'https://vhols-uat.webdev.vholsinternal.co.uk'
+
+sit: 'https://vhols-sit.webdev.vholsinternal.co.uk'
+
+test: 'https://vhols-test1.webdev.vholsinternal.co.uk'
+
+search: '/hotel/orlando?departureDate=05-06-2018&duration=7&room=a2,i0'
+
