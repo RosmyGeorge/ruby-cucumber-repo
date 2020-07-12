@@ -6,6 +6,6 @@ gem "selenium-webdriver", "2.53.4"
 gem "data_magic"
 gem "rspec"
 gem "activesupport"
-gem "rake", "~> 10.4"
+gem "rake", "~> 12.3"
 gem 'pry'
 gem 'watir-scroll'
