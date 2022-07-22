@@ -64,7 +64,7 @@ GEM
       rubyzip (~> 1.0)
       websocket (~> 1.0)
     thread_safe (0.3.6)
-    tzinfo (1.2.4)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
     watir-scroll (0.2.0)
       watir-webdriver
